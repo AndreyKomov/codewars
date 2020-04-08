@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let n = [1, 5, 15, 10, 90];
+    let a = 5;
+    let multiply_all = [];
+    function multiplyAll (n, a) {
+      for (let i = 0; i < n.length; i++) {
+        let newN = n[i]*a;
+        console.log("newN:", newN);
+        
+        multiply_all.push(newN);
+      }
+      return multiply_all;
+    }
+    console.log("multiplyAll:", multiplyAll(n, a));
+    
+  </script>
+</body>
+</html>
