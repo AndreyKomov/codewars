@@ -1,3 +1,3 @@
 # codewars
 
-##FizzBuzz
+## FizzBuzz
