@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fizzBuzz(n) {
+
+      // to create the array of numbers from 1 to n
+      let finishArr = [];
+      for (let i = 0; i < n; i++) {
+        let a = n - i;
+        if (a >= 1) {
+          finishArr.unshift(a);
+          // console.log("finishArr:", finishArr);
+        }
+        // console.log("a:", a);
+      }
+
+      // to find numbers are multiple of 3 and 5
+      for (let t = 0; t < finishArr.length; t++) {
+        let threeFive = finishArr[t];
+        // console.log("three:", threeFive);
+
+        if (threeFive % 3 === 0 && threeFive % 5 === 0) {
+          let arr = finishArr.splice(t, 1, "FizzBuzz");
+          // console.log("arr:", arr);
+        }
+      }
+
+      // to find numbers are multiple of 3
+      for (let j = 0; j < finishArr.length; j++) {
+        let three = finishArr[j];
+        // console.log("three:", three);
+
+        if (three % 3 === 0) {
+          let arr = finishArr.splice(j, 1, "Fizz");
+          // console.log("arr:", arr);
+        }
+      }
+
+      // to find numbers are multiple of 5
+      for (let z = 0; z < finishArr.length; z++) {
+        let five = finishArr[z];
+        // console.log("five:", five);
+
+        if (five % 5 === 0) {
+          let arrFive = finishArr.splice(z, 1, "Buzz");
+          // console.log("arr:", arrFive);
+        }
+      }
+      return finishArr;
+    }
+    console.log("fizzBuzz:", fizzBuzz(15));
+
+
+  </script>
+</body>
+
+</html>
