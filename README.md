@@ -1,5 +1,7 @@
 # codewars
 
 ## FizzBuzz
-## multiply array
-## shortest word
+## Multiply array
+## Shortest word
+## Multily array
+## Square every digit
