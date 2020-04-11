@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = [1, 5 , 10, 19];
+    let e = 22;
+    function sum(a, b, c) {
+      return a+b-c+e;
+    }
+    console.log("sum:", sum(9, 8, 10));
+    console.log(sum(...arr)); // ...arr соответствует 1, 5, 10, 19 (разбомбленный массив), этот метод из
+    //массива [el, el2, el3, el4]
+    //делает просто перечени элементов (el, el2, el3, el4)
+    
+    
+  </script>
+</body>
+</html>

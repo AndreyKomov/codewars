@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+    debugger
+    function squareDigit(num) {
+    let numStr = num.toString().split("");
+    console.log("numStr:", numStr);
+    let arrPow = numStr.map (el=>{
+      return Math.pow(el, 2);
+    });
+    console.log("arrPow:", arrPow);
+    return +arrPow.join("");
+    }
+    console.log("function:", squareDigit(9119));
+    
+  </script>
+</body>
+</html>
