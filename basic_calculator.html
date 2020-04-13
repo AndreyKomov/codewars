@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function calculate(num1, operation, num2) {
+      debugger
+      let arr = [];
+      let stringFromArray;
+      let result;
+      if (operation !="+" && operation !="-" && operation !="*" && operation !="/") {
+        return null;
+      } else if (operation==="/" && num2===0) {
+        return null;
+      } else {
+        arr.push(num1, operation, num2);
+        stringFromArray = arr.join("");
+        result = eval(stringFromArray);
+      }
+      return result;
+    }
+
+    console.log("equal:", "+"==="+");
+    
+    console.log("calculate:", calculate(5, "/", 10));
+
+  </script>
+</body>
+
+</html>
