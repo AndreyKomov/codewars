@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function hydrate(s) {
+      //debugger
+      let stringArray = s.split(" "); //создал массив из слов и цифр
+      console.log("stringArray:", stringArray);
+
+      let arrayNew = stringArray.map(el => {     //каждый элемент преобразован в число
+        return +el;
+      });
+      console.log("arrayNew:", arrayNew);
+
+      //debugger
+      let resultArray = [];
+      for (let i = 0; i < stringArray.length; i++) {  //создаём массив только из строко-чисел
+        if (stringArray[i] === "1" || stringArray[i] === "2" || stringArray[i] === "3" || stringArray[i] === "4"
+          || stringArray[i] === "5"
+          || stringArray[i] === "6" || stringArray[i] === "7" || stringArray[i] === "8" || stringArray[i] === "9") {
+          resultArray.push(stringArray[i]);
+        }
+      }
+      //debugger
+      let resultArrayOfNumbers = resultArray.map(el => { //все элементы массива преобразовать в числа
+        return +el;
+      })
+      console.log("resultArray:", resultArray);
+      console.log("resultArrayOfNumbers:", resultArrayOfNumbers);
+
+      let resultSum = 0;
+      for (let i = 0; i < resultArrayOfNumbers.length; i++) {  //суммируем все элементы массива
+        resultSum = resultSum + resultArrayOfNumbers[i];
+      }
+
+
+
+
+      // console.log(NaN === NaN);
+      // console.log("isNaN:", isNaN(arrayOfNumbers[2]));
+
+      //console.log("Nan+2:", NaN + 2);
+
+      // let pushArray = emptyArray.push(s);
+      // let joinString = emptyArray.join(" ");
+      // let numbersFromString = parseInt (joinString);
+      //debugger
+      if (resultSum === 1) {
+        return resultSum + " glass of water"
+      } else {
+        return resultSum + " glasses of water"
+      };
+    }
+    console.log("hydrate:", hydrate("2 glasses of wine and 1 shot"));
+
+  </script>
+</body>
+
+</html>
