@@ -7,3 +7,4 @@
 ## Square every digit
 ## Easy mathematical callback
 ## Basic calculator
+## Responsible drinking
