@@ -9,3 +9,4 @@
 ## Basic calculator
 ## Responsible drinking
 ## Find screen size
+## Find the area of the rectangle
