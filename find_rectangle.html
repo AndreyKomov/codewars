@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function area(d, l) {
+      debugger
+      let s;
+      if (d<=l) {
+        return "Not a rectangle";
+      } else {
+        s = l*(Math.pow((d*d-l*l), 0.5));
+      }
+      
+      return +s.toFixed(2);
+    }
+    console.log("rect area:", area(5, 4));
+    
+  </script>
+</body>
+</html>
