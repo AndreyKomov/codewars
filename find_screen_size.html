@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    debugger
+    function findScreenHeight(width, ratio) {
+      let ratioNumberArray = ratio.split(":");        //соотношение в массив [4, 3]
+      console.log("ratio array:", ratioNumberArray);
+      let ratioNumberWidth = +ratioNumberArray[0];   //число ширина в соотношении
+      let ratioNumberHeight = +ratioNumberArray[1];  //число высота в соотношении
+      console.log("Width-ratio, height-ratio:", ratioNumberWidth, ratioNumberHeight);
+      let ratioNumber = ratioNumberWidth / ratioNumberHeight;  //соотношение число
+      console.log("ratioNumber:", ratioNumber);
+      let height = width / ratioNumber;  //значение высоты
+      console.log("height:", height);
+
+      return width + "x" + height;
+    }
+    console.log("screen size:", findScreenHeight(1280, "16:9"));
+
+  </script>
+</body>
+
+</html>
