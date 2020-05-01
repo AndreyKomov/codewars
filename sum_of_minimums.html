@@ -13,18 +13,15 @@
       let summArray = [];
       for (let i = 0; i < arr.length; i++) {
         summArray.push(Math.min(...arr[i]));
-        
       }
 
       let resultSum = 0;
       for (let i = 0; i < summArray.length; i++) {
         resultSum = resultSum + summArray[i];
-        
       }
 
       return resultSum;
     }
-    
     console.log("sumOfMinimums:", sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 55]]));
 
   </script>

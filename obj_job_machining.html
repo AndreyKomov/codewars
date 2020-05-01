@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let valera = {
+      minSalary: 10000,
+      name: "toldtayaJopa"
+    };
+    let stroitel = { maxSalary: 500 };
+    let headStroitel = { maxSalary: 50000 };
+
+    function match(candidate, job) {
+      // debugger
+      if (candidate.minSalary <= job.maxSalary) {
+        return candidate.name;
+      } else {
+        return "fuck off";
+      }
+    }
+    // console.log(match({ minSalary: 1000 }, headStroitel));
+    // console.log(match(valera, headStroitel));
+
+    // console.log(valera.minSalary);
+    // console.log(valera["minSalary"]);
+
+    valera.name = "huilo";
+    // console.log(valera.name); //huilo
+
+    // console.log("huilo:", match(valera, headStroitel));
+
+    let gorodGeroi = {
+      policai: 1002,
+      medical: 50,
+      sobes: "net nihuya"
+    }
+    // console.log(gorodGeroi.sobes); //15852522
+
+
+    function findSobes(obj, telNumber) {
+      debugger
+      for (let i in obj) {
+        console.log("gorodGeroi:", obj[i]);
+
+        if (obj[i] === "net nihuya") {
+          return i;
+        }
+      }
+
+      for (let u in obj) {
+        if (obj[u] === telNumber) {
+          return u;
+        }
+      }
+    }
+
+    console.log("sobes:", findSobes(gorodGeroi, 1002));
+    // console.log("policai:", findSobes(gorodGeroi));
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
