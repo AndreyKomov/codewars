@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function mutation(arr) {
+  let lowerArray=[];
+  for (let i=0; i<arr.length; i++) {
+    let a=arr[i].toLowerCase();
+    lowerArray.push(a);
+  }
+  console.log("array of lowercase words:", lowerArray);
+
+  let strCompare=lowerArray[1].split("");
+  console.log(strCompare);
+
+  let indicator;
+  for (let i=0; i<strCompare.length; i++) {
+    let localIndicator=lowerArray[0].includes(strCompare[i]);
+    console.log(localIndicator);
+    if (localIndicator===false) {
+      indicator=10;
+    }
+  }
+  console.log(indicator)
+
+  if (indicator===10) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+  </script>
+</body>
+</html>
