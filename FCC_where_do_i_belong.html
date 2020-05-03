@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* Return the lowest index at which a value (second argument) should be inserted into an array (first argument)
+     once it has been sorted. The returned value should be a number.
+
+For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), 
+but less than 2 (index 1).
+
+Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted
+it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1). */
+
+//alt+shift+a
+
+    function getIndexToIns(arr, num) {
+      debugger
+  let fullArray=arr.slice();
+  console.log("copy of arr:", fullArray);
+  fullArray.push(num);
+  console.log("full array with num:", fullArray);
+
+  function compare(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+}
+
+  let a=fullArray.sort(compare);
+  console.log("sort array:", a);
+//   let positionNumber=a.indexOf(num);
+// console.log(positionNumber);
+  for (let i=0; i<a.length; i++) {
+    console.log("i element:", a[i]);
+    if (a[i]===num) {
+      console.log("position of num:", i);
+      return i;
+    }
+  }
+  
+  
+}
+
+getIndexToIns([3, 10, 12, 5], 3);
+  </script>
+</body>
+</html>

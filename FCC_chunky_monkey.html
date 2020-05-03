@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function chunkArrayInGroups(arr, size) {
+  let canc=arr.length/size;
+  console.log(canc);
+
+  //console.log(arr.slice(0, 2));
+
+  let resultArr=[];
+  let startIndex=0;
+  for (let i=0; i<canc; i=i+1) {
+    let arrSize=arr.slice(startIndex, startIndex+size);
+    startIndex=startIndex+size;
+    console.log(arrSize);
+    resultArr.push(arrSize);
+  }
+  console.log(resultArr);
+  
+  return resultArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+  </script>
+</body>
+</html>
